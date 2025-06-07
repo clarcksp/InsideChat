@@ -1,11 +1,11 @@
 {
-  "name": "modern-helpdesk",
+  "name": "insidechat-landing",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview --port 8080 --host 0.0.0.0",
     "start": "vite preview --port $PORT --host 0.0.0.0",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"

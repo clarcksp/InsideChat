@@ -6,8 +6,9 @@ README.md
 .env
 .nyc_output
 coverage
-.nyc_output
 .vscode
 .DS_Store
 dist
 build
+*.log
+.eslintcache

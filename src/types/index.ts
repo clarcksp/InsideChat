@@ -1,6 +1,8 @@
+import { ComponentType } from 'react';
+
 // Common types used across the application
 export interface Feature {
-  icon: React.ComponentType<{ className?: string }>;
+  icon: ComponentType<{ className?: string }>;
   title: string;
   description: string;
 }
