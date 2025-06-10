@@ -92,7 +92,7 @@ function App() {
       features: [
         "1 número WhatsApp",
         "Até 5 atendentes",
-        "1.000 mensagens/mês",
+        "Mensagens ilimitadas",
         "Chat em tempo real",
         "Relatórios básicos",
         "Suporte por email"
@@ -107,7 +107,7 @@ function App() {
       features: [
         "2 números WhatsApp",
         "Até 10 atendentes",
-        "5.000 mensagens/mês",
+        "Mensagens ilimitadas",
         "Chatbot inteligente",
         "Relatórios avançados",
         "API de integração",
@@ -122,8 +122,8 @@ function App() {
       description: "Para grandes operações",
       features: [
         "4 números WhatsApp",
-        "Atendentes ilimitados",
-        "15.000 mensagens/mês",
+        "Até 20 atendentes",
+        "Mensagens ilimitadas",
         "IA avançada",
         "Relatórios personalizados",
         "Integrações customizadas",
