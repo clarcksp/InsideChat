@@ -110,7 +110,7 @@ function App() {
         "Mensagens ilimitadas",
         "Chatbot inteligente",
         "Relatórios avançados",
-        "API de integração",
+        "Integrações customizadas",
         "Suporte prioritário"
       ],
       highlight: true
@@ -125,8 +125,8 @@ function App() {
         "Até 20 atendentes",
         "Mensagens ilimitadas",
         "IA avançada",
-        "Relatórios personalizados",
-        "Integrações customizadas",
+        "Relatórios personalizados*",
+        "Integrações customizadas*",
         "Gerente de sucesso"
       ],
       highlight: false
@@ -163,10 +163,12 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-lg">IC</span>
-              </div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+              <img 
+                src="https://inside.gru.br/images/Insidechatsemfundo.jpg" 
+                alt="InsideChat" 
+                className="h-12 w-auto mr-3"
+              />
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 bg-clip-text text-transparent">
                 InsideChat
               </h1>
             </div>
@@ -193,7 +195,7 @@ function App() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 text-white font-semibold rounded-xl hover:from-orange-600 hover:via-orange-700 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 <WhatsAppIcon />
                 <span className="ml-2">Começar Grátis</span>
@@ -229,7 +231,7 @@ function App() {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-xl"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 text-white font-semibold rounded-xl"
                 >
                   <WhatsAppIcon />
                   <span className="ml-2">Começar Grátis</span>
@@ -250,7 +252,7 @@ function App() {
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Transforme seu{' '}
-              <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 bg-clip-text text-transparent">
                 WhatsApp
               </span>
               <br />
@@ -264,7 +266,7 @@ function App() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold text-lg rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 text-white font-semibold text-lg rounded-xl hover:from-orange-600 hover:via-orange-700 hover:to-red-600 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 <WhatsAppIcon />
                 <span className="ml-2">Começar Gratuitamente</span>
@@ -379,7 +381,7 @@ function App() {
               >
                 {plan.highlight && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Mais Popular
                     </span>
                   </div>
@@ -406,13 +408,18 @@ function App() {
                     </li>
                   ))}
                 </ul>
+                {plan.name === 'Enterprise' && (
+                  <p className="text-xs text-gray-500 mb-6 italic">
+                    * Demanda análise prévia e pode gerar custos adicionais
+                  </p>
+                )}
                 <a
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full inline-flex items-center justify-center px-6 py-4 font-semibold rounded-xl transition-all duration-300 ${
                     plan.highlight
-                      ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 shadow-lg hover:shadow-xl'
+                      ? 'bg-gradient-to-r from-orange-500 via-orange-600 to-red-500 text-white hover:from-orange-600 hover:via-orange-700 hover:to-red-600 shadow-lg hover:shadow-xl'
                       : 'border-2 border-orange-500 text-orange-600 hover:bg-orange-50'
                   }`}
                 >
@@ -426,7 +433,7 @@ function App() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-orange-600 to-red-600">
+      <section className="py-24 bg-gradient-to-r from-orange-500 via-orange-600 to-red-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Pronto para revolucionar seu atendimento?
@@ -458,9 +465,11 @@ function App() {
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
               <div className="flex items-center mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3">
-                  <span className="text-white font-bold text-lg">IC</span>
-                </div>
+                <img 
+                  src="https://inside.gru.br/images/Insidechatsemfundo.jpg" 
+                  alt="InsideChat" 
+                  className="h-10 w-auto mr-3 brightness-0 invert"
+                />
                 <h3 className="text-2xl font-bold">InsideChat</h3>
               </div>
               <p className="text-gray-400 mb-6 max-w-md">
